@@ -4,19 +4,71 @@
     </pre>
   </div>
 
-  <div class="technologys rounded d-inline-flex justify-content-around py-5 mx-3 w-100 text-center bg-white text-dark"> 
-    <div class="frontend">
-      <h1>Frontend</h1>
-      <p>Angular</p>
-    </div>
-    <div class="backend">
-      <h1>Backend</h1>
-      <p>C#</p>
-    </div>
-    <div class="mobile">
-      <h1>Mobile</h1>
-      <p>Flutter</p>
-    </div>
+  <table class="technologys table bg-white text-center rounded py-5 mx-3 my-5">
+    <thead>
+      <tr>
+        <th scope="col">Frontend</th>
+        <th scope="col">Backend</th>
+        <th scope="col">Mobile</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Angular</td>
+        <td>C#</td>
+        <td>Flutter</td>
+      </tr>
+      <tr>
+        <td>SCSS</td>
+        <td>Java</td>
+        <td>Ionic</td>
+      </tr>
+      <tr>
+        <td>Bootstrap</td>
+        <td>PHP</td>
+        <td>Android (Java)</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+        <td></td>
+        <td>Swift (iOS)</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="w-100 my-5">
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide><img class="company w-100" src="/assets/companies/1.png"/></ng-template>
+      <ng-template carouselSlide><img class="company" src="/assets/companies/2.png"/></ng-template>
+      <ng-template carouselSlide><img class="company" src="/assets/companies/3.png"/></ng-template>
+      <ng-template carouselSlide><img class="company" src="/assets/companies/4.png"/></ng-template>
+      <ng-template carouselSlide><img class="company" src="/assets/companies/5.png"/></ng-template>
+      <ng-template carouselSlide><img class="company" src="/assets/companies/6.png"/></ng-template>
+      <ng-template carouselSlide><img class="company" src="/assets/companies/7.png"/></ng-template>
+      <ng-template carouselSlide><img class="company" src="/assets/companies/8.png"/></ng-template>
+      <ng-template carouselSlide><img class="company" src="/assets/companies/9.png"/></ng-template>
+      <ng-template carouselSlide><img class="company" src="/assets/companies/10.png"/></ng-template>
+      <ng-template carouselSlide><img class="company" src="/assets/companies/11.png"/></ng-template>
+      <ng-template carouselSlide><img class="company" src="/assets/companies/12.png"/></ng-template>
+      <ng-template carouselSlide><img class="company" src="/assets/companies/13.png"/></ng-template>
+      <ng-template carouselSlide><img class="company" src="/assets/companies/14.png"/></ng-template>
+    </owl-carousel-o>
   </div>
-  
+
+  <div class="projects d-flex justify-content-around">
+    <a href="#">
+      <div class="card d-flex justify-content-center align-items-center p-5">
+        <p>Projeto</p>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card d-flex justify-content-center align-items-center p-5">
+        <p>Projeto</p>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card d-flex justify-content-center align-items-center p-5">
+        <p>Projeto</p>
+      </div>
+    </a>
+  </div>
 <router-outlet></router-outlet>

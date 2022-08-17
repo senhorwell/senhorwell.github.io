@@ -1,15 +1,17 @@
 <div class="content container" role="main">
-  <div class="terminal apresentation d-flex col-3 my-5 mx-3">
-    <pre><h1>Hi, my name is Well, programmer for 8 years</h1>
-    </pre>
+  <div class="terminal apresentation d-flex col-3 my-5 px-2">
+    <h1>Hi, my name is Well, programmer 8 years ago</h1>
   </div>
 
-  <table class="technologys table bg-white text-center rounded py-5 mx-3 my-5">
+  <div class="title d-flex justify-content-center">
+    <h2>Skills</h2>
+  </div>
+  <table class="technologys table bg-white text-center rounded pb-5 mb-5">
     <thead>
       <tr>
-        <th scope="col">Frontend</th>
-        <th scope="col">Backend</th>
-        <th scope="col">Mobile</th>
+        <th style="width: 30%">Frontend</th>
+        <th style="width: 30%">Backend</th>
+        <th style="width: 30%">Mobile</th>
       </tr>
     </thead>
     <tbody>
@@ -35,7 +37,10 @@
       </tr>
     </tbody>
   </table>
-  <div class="w-100 my-5">
+  <div class="title pt-4 d-flex justify-content-center">
+    <h2>Clients and companies that I worked</h2>
+  </div>
+  <div class="w-100 mb-5">
     <owl-carousel-o [options]="customOptions">
       <ng-template carouselSlide><img class="company w-100" src="/assets/companies/1.png"/></ng-template>
       <ng-template carouselSlide><img class="company" src="/assets/companies/2.png"/></ng-template>
@@ -53,22 +58,172 @@
       <ng-template carouselSlide><img class="company" src="/assets/companies/14.png"/></ng-template>
     </owl-carousel-o>
   </div>
-
-  <div class="projects d-flex justify-content-around">
-    <a href="#">
-      <div class="card d-flex justify-content-center align-items-center p-5">
-        <p>Projeto</p>
-      </div>
-    </a>
-    <a href="#">
-      <div class="card d-flex justify-content-center align-items-center p-5">
-        <p>Projeto</p>
-      </div>
-    </a>
-    <a href="#">
-      <div class="card d-flex justify-content-center align-items-center p-5">
-        <p>Projeto</p>
-      </div>
-    </a>
+  
+  <!--
+  <div class="container">
+    <div class="projects d-flex justify-content-around flex-wrap">
+      <a href="#" class="col-5 col-md-2 my-3">
+        <div class="card d-flex justify-content-center align-items-center py-5">
+          <p>Projeto</p>
+        </div>
+      </a>
+      <a href="#" class="col-5 col-md-2 my-3">
+        <div class="card d-flex justify-content-center align-items-center py-5">
+          <p>Projeto</p>
+        </div>
+      </a>
+      <a href="#" class="col-5 col-md-2 my-3">
+        <div class="card d-flex justify-content-center align-items-center py-5">
+          <p>Projeto</p>
+        </div>
+      </a>
+      <a href="#" class="col-5 col-md-2 my-3">
+        <div class="card d-flex justify-content-center align-items-center py-5">
+          <p>Projeto</p>
+        </div>
+      </a>
+    </div>
   </div>
+-->
+  
+  <div class="col-12 mt-5 d-flex justify-content-between flex-wrap">
+    <div class="col-12 col-md-3">
+      <img class="w-100" src="/assets/capacitor.gif"/>
+    </div>
+    <div class="bg-black rounded panel col-12 col-md-8">
+      <div class="bg-grey rounded orange m-3 p-3 d-flex justify-content-around">
+        <div class="col-2">
+          <h2 class="bg-red text-center">Month</h2>
+          <div class="card">
+            <p>{{currentMonth}}</p>
+          </div>
+        </div>
+        <div class="col-2">
+          <h2 class="bg-red text-center">Day</h2>
+          <div class="card">
+            <p>{{currentDay}}</p>
+          </div>
+        </div>
+        <div class="col-2">
+          <h2 class="bg-red text-center">Year</h2>
+          <div class="card">
+            <p>{{currentYear}}</p>
+          </div>
+        </div>
+        <div class="col-2">
+          <h2 class="bg-red text-center">Hour</h2>
+          <div class="card">
+            <p>{{currentHour}}</p>
+          </div>
+        </div>
+        <div class="col-2">
+          <h2 class="bg-red text-center">Min</h2>
+          <div class="card">
+            <p>{{currentMin}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-grey rounded green m-3 p-3 d-flex justify-content-around">
+        <div class="col-2">
+          <h2 class="bg-red text-center">Month</h2>
+          <div class="card">
+            <p>{{month}}</p>
+          </div>
+        </div>
+        <div class="col-2">
+          <h2 class="bg-red text-center">Day</h2>
+          <div class="card">
+            <p>{{day}}</p>
+          </div>
+        </div>
+        <div class="col-2">
+          <h2 class="bg-red text-center">Year</h2>
+          <div class="card">
+            <p>{{year}}</p>
+          </div>
+        </div>
+        <div class="col-2">
+          <h2 class="bg-red text-center">Hour</h2>
+          <div class="card">
+            <p>{{hour}}</p>
+          </div>
+        </div>
+        <div class="col-2">
+          <h2 class="bg-red text-center">Min</h2>
+          <div class="card">
+            <p>{{min}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <ul class="timeline">
+        <li (click)="changeDate(0)">
+          <div class="timeline-badge"><mat-icon aria-hidden="false" aria-label="home icon" fontIcon="home"></mat-icon></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">First course in technology</h4>
+              <p>
+                <small class="text-muted d-flex">
+                  <mat-icon aria-hidden="false" aria-label="schedule icon" fontIcon="schedule"></mat-icon>
+                  <p class="py-0 px-2">2011</p>
+                </small>
+              </p>
+            </div>
+            <div class="timeline-body">
+              <p>Computer technician course, I developed knowledge to format computers and repair damaged parts</p>
+            </div>
+          </div>
+        </li>
+        <li (click)="changeDate(1)" class="timeline-inverted">
+          <div class="timeline-badge warning"><mat-icon aria-hidden="false" aria-label="home icon" fontIcon="home"></mat-icon></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">High school</h4>
+              <p>
+                <small class="text-muted d-flex">
+                  <mat-icon aria-hidden="false" aria-label="schedule icon" fontIcon="schedule"></mat-icon>
+                  <p class="py-0 px-2">2014</p>
+                </small>
+              </p>
+            </div>
+          </div>
+        </li>
+        <li (click)="changeDate(2)">
+          <div class="timeline-badge danger"><mat-icon aria-hidden="false" aria-label="home icon" fontIcon="home"></mat-icon></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">University graduate in computer science</h4>
+              <p>
+                <small class="text-muted d-flex">
+                  <mat-icon aria-hidden="false" aria-label="schedule icon" fontIcon="schedule"></mat-icon>
+                  <p class="py-0 px-2">2020</p>
+                </small>
+              </p>
+            </div>
+            <div class="timeline-body">
+              <p>I studied at the State University of Londrina, with knowledge focused on enterprise code</p>
+            </div>
+          </div>
+        </li>
+        <li (click)="changeDate(3)" class="timeline-inverted">
+          <div class="timeline-badge warning"><mat-icon aria-hidden="false" aria-label="home icon" fontIcon="home"></mat-icon></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Opened my own company</h4>
+              <p>
+                <small class="text-muted d-flex">
+                  <mat-icon aria-hidden="false" aria-label="schedule icon" fontIcon="schedule"></mat-icon>
+                  <p class="py-0 px-2">2020</p>
+                </small>
+              </p>
+            </div>
+            <div class="timeline-body">
+              <p>With the pandemic, I reinvented myself and open my own company to serve clients who were looking for my services, many of them are listed above</p>
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>
 <router-outlet></router-outlet>
